@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FoodOn.github.io/static/css/main.c2cab247.css",
+    "main.js": "/FoodOn.github.io/static/js/main.8941a165.js",
+    "index.html": "/FoodOn.github.io/index.html",
+    "main.c2cab247.css.map": "/FoodOn.github.io/static/css/main.c2cab247.css.map",
+    "main.8941a165.js.map": "/FoodOn.github.io/static/js/main.8941a165.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2cab247.css",
+    "static/js/main.8941a165.js"
+  ]
+}
