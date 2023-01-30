@@ -1,16 +1,13 @@
-
-import Footer from "./Components/Footer";
-import Hamburguesas from "./Components/Hamburguesas";
-import Header from "./Components/Header";
 import NavBar from "./Components/NavBar";
+import ItemList from "./Components/ItemListContainer"
+
+<ItemList title="Bienvenido"></ItemList>
 
 function App() {
     return(
         <>
         <NavBar/>
-        <Header/>
-        <Hamburguesas/>
-        <Footer/>
+        <ItemList/>
         </>
     )
 }
