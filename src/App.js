@@ -2,13 +2,11 @@ import NavBar from "./Components/NavBar";
 import ItemList from "./Components/ItemListContainer"
 
 
-
-
 function App() {
     return(
         <>
         <NavBar/>
-        <ItemList/>
+        <ItemList greeting="Bienvenidos"/>
         </>
     )
 }
