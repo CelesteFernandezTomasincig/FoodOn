@@ -10,13 +10,13 @@ const ComidaDetail = () => {
   let { id } = useParams();
 
   useEffect(()=> {
-    axios(`./json/data.json${id}`).then((res)=>
-      setComidas(res.data)
+    axios(`../json/data.json`).then((res)=>
+      setComidas(res.data.find((item)=>item.id===parseInt(id)))
       );
   }, [id])
 return (
   <div className='comidaDetail'>
-      <div key={hamburguesa.id}>
+      <div>
           <ComidaCard data={hamburguesa}/>
       </div>
   </div>
