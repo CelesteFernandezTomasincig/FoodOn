@@ -13,15 +13,15 @@ const ComidaCard = ({data}) => {
         <CardMedia
           component="img"
           height="140"
-          image=" "
-          alt="green iguana"
+          image={data.img}
+          alt="Hamburger"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
           {data.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          {data.email}
+          {data.precio}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -31,8 +31,8 @@ const ComidaCard = ({data}) => {
         </Button>
       </CardActions>
     </Card>
+
   );
 }
-
 export default ComidaCard;
 

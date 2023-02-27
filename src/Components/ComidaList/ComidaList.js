@@ -1,22 +1,21 @@
 import React, {useEffect, useState} from 'react';
 import ComidaCard from '../ComidaCard/ComidaCard';
 import {Link} from "react-router-dom"
-
+import axios from 'axios';
 
 
     const ComidaList = () => {
       const [comida, setComida] = useState([]);
     
       useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then((response) => response.json())
-        .then((json) => setComida(json));
-          
+        axios('./json/data.json').then((res) => setComida(res.data));
       }, []);
 
-    return( <div>
+    return( 
+    <div>
       {comida.map(hamburguesa => {
-      return (<Link to={`/detail/hamburguesa.id`}>
+      return (
+      <Link to={`/detail/${hamburguesa.id}`}>
         <ComidaCard key={hamburguesa.id} data={hamburguesa}/>
       </Link>);
      })}
@@ -25,3 +24,4 @@ import {Link} from "react-router-dom"
   };
 
 export default ComidaList;
+

@@ -1,26 +1,27 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from "axios";
+import axios from 'axios';
 import ComidaCard from '../../Components/ComidaCard/ComidaCard';
 
 
 const ComidaDetail = () => {
-    const [comidas, setComidas] = useState ({});
+  const [hamburguesa, setComidas] = useState ({});
 
-    let { id } = useParams();
+  let { id } = useParams();
 
-    useEffect(()=> {
-        axios(`https://jsonplaceholder.typicode.com/users/${id}`).then((res)=>
-        setComidas(res.data)
-        );
-    }, [id])
-  return (
-    <div className="ComidaDetail-list">
-        <div key={comidas.id}>
-            <ComidaCard data={comidas}/>
-        </div>
-    </div>
-  )
+  useEffect(()=> {
+    axios(`./json/data.json${id}`).then((res)=>
+      setComidas(res.data)
+      );
+  }, [id])
+return (
+  <div className='comidaDetail'>
+      <div key={hamburguesa.id}>
+          <ComidaCard data={hamburguesa}/>
+      </div>
+  </div>
+)
 }
 
 export default ComidaDetail;
+
