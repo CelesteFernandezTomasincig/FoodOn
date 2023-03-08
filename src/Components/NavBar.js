@@ -1,9 +1,12 @@
 /*import {navbar, navbarDropdown} from "react-bootstrap";*/
 import { Link } from 'react-router-dom';
 import CartWIdget from './CartWIdget';
+import { useContext } from 'react';
+import { ItemsContext } from '../context/ItemsContext';
 
 
 const NavBar = () => {
+    const {comida, setComida} = useContext(ItemsContext)
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
@@ -20,7 +23,7 @@ const NavBar = () => {
                         <button class="btn btn-outline-dark" type="submit" >
                             <i class="bi-cart-fill me-1"></i>
                             Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">{comida.lenght}</span>
                         </button>
                     </form>
                 </div>

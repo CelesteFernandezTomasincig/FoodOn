@@ -6,7 +6,6 @@ import axios from 'axios';
 
     const ComidaList = () => {
       const [comida, setComida] = useState([]);
-    
       useEffect(() => {
         axios('./json/data.json').then((res) => setComida(res.data));
       }, []);

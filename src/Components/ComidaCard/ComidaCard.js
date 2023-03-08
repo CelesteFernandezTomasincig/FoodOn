@@ -22,7 +22,7 @@ const ComidaCard = ({ data }) => {
             {data.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {data.precio}
+            ${data.precio}
           </Typography>
         </CardContent>
       </CardActionArea>

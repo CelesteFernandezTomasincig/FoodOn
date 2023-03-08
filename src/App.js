@@ -8,13 +8,16 @@ import ComidaDetail from './pages/ComidaDetail/ComidaDetail';
 
 import NavBar from "./Components/NavBar";
 
-
+//importo mi contexto provider
+import { ItemsProvider } from './context/ItemsContext';
 
 
 function App() {
   return (
     <Router>
+      <ItemsProvider>
       <NavBar></NavBar>
+      </ItemsProvider>
       <Routes>
        <Route  path="/" element={<Home/> } />
         <Route path="/masVendido" element={<MasVendidos/>} />
