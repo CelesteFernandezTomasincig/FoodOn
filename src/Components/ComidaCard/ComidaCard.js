@@ -6,9 +6,10 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
 
-const ComidaCard = ({data}) => {
+
+const ComidaCard = ({ data }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, display: 'inline-block', width: '50%', }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -18,10 +19,10 @@ const ComidaCard = ({data}) => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-          {data.name}
+            {data.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          {data.precio}
+            {data.precio}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -31,8 +32,10 @@ const ComidaCard = ({data}) => {
         </Button>
       </CardActions>
     </Card>
-
   );
-}
+};
+
+
+
 export default ComidaCard;
 

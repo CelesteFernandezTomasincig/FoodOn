@@ -9,36 +9,57 @@
   {
     "id":2,
     "name": "Hamburguesa Chees",
-    "precio": " $1700",
+    "precio": 1700,
     "descripcion": "qui est esse est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
     "img": " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWazD8VL2Pv2rxIlXnC56nC6Nwx37zmjXiFA&usqp=CAU"
   },
   {
     "id":3,
     "name": "Hamburguesa Qatar",
-    "precio": " $2000",
+    "precio": 2000,
     "descripcion": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Br-_BK1f3bxj50HZ9TTGdHE5fkyZuOr35w&usqp=CAU"
   },
   {
     "id":4,
     "name": "Hamburguesa Messirve",
-    "precio": " $1650",
+    "precio": 1650,
     "descripcion": "eum et est occaecati",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNz-SVDlA7_LI6cfiJPDB6SiAh62IUOMmSOg&usqp=CAU"
   },
   {
     "id":5,
     "name": "Hamburguesa Tuki",
-    "precio": " $1750",
+    "precio":  1750,
     "descripcion": "dolorem eum magni eos aperiam quia",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_VytlWwF4ICuFG2PSA-pWV2UUbGqXzIiHkw&usqp=CAU"
   },
   {
     "id":6,
     "name": "Hamburguesa Sarará",
-    "precio": "$1999",
+    "precio": 1999,
     "descripcion": "dolorem eum magni eos aperiam quia",
     "img": "https://www.infobae.com/new-resizer/IGVNt_OwhVuJnBWHh2OknRaxNIY=/1200x900/filters:format(webp):quality(85)//arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/4E7AO7Q6I5BULNYYH3SSO4WP2Y.jpeg"
+  },
+  {
+    "id":7,
+    "name": "Hamburguesa Sneak",
+    "precio": 2100,
+    "descripcion": "dolorem eum magni eos aperiam quia",
+    "img": "https://www.recetasnestle.com.ec/sites/default/files/srh_recipes/4e4293857c03d819e4ae51de1e86d66a.jpg"
+  },
+  {
+    "id":8,
+    "name": "Hamburguesa Cherry",
+    "precio": 1650,
+    "descripcion": "dolorem eum magni eos aperiam quia",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuYoscGk59IBLX4b-FhssMb0cjThuH0urozw&usqp=CAU"
+  },
+  {
+    "id":9,
+    "name": "Hamburguesa Bacone",
+    "precio": 1999,
+    "descripcion": "dolorem eum magni eos aperiam quia",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs3bdsc4tFKRD01loRdWN6Pi1M-uXq95DyOQ&usqp=CAU"
   }
 ]

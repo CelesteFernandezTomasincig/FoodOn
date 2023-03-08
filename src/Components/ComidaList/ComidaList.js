@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import ComidaCard from '../ComidaCard/ComidaCard';
-import {Link} from "react-router-dom"
+import ComidaCard from "../ComidaCard/ComidaCard";
+import {Link} from "react-router-dom";
 import axios from 'axios';
 
 
