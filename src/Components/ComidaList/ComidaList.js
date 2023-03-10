@@ -6,9 +6,9 @@ import axios from 'axios';
 
 
     const ComidaList = () => {
-      const [comida, setComida] = useState([]);
+      const [Item, setItem] = useState([]);
       useEffect(() => {
-        axios('./json/data.json').then((res) => setComida(res.data));
+        axios('./json/data.json').then((res) => setItem(res.data));
 
  
       }, []);
@@ -16,7 +16,7 @@ import axios from 'axios';
 
     return( 
     <div>
-      {comida.map(hamburguesa => {
+      {Item.map(hamburguesa => {
       return (
       <Link to={`/detail/${hamburguesa.id}`}>
         <ComidaCard key={hamburguesa.id} data={hamburguesa}/>
@@ -27,4 +27,3 @@ import axios from 'axios';
   };
 
 export default ComidaList;
-
