@@ -60,6 +60,7 @@
     "name": "Hamburguesa Bacone",
     "precio": 1999,
     "descripcion": "dolorem eum magni eos aperiam quia",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs3bdsc4tFKRD01loRdWN6Pi1M-uXq95DyOQ&usqp=CAU"
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs3bdsc4tFKRD01loRdWN6Pi1M-uXq95DyOQ&usqp=CAU",
+    "masVendido": "True"
   }
 ]

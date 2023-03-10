@@ -1,8 +1,9 @@
 import React from 'react'
 
-const MasVendidos = () => {
+
+function MasVendidos() {
   return (
-    <div>MasVendidos</div>
+    <div>mas vendido</div>
   )
 }
 
