@@ -9,23 +9,20 @@ import ComidaDetail from './pages/ComidaDetail/ComidaDetail';
 import NavBar from "./Components/NavBar";
 
 //importo mi contexto provider
-import { CartProvider } from './context/CartContext';
-
-
 
 
 function App() {
   return (
     <Router>
-      <CartProvider>
-      <NavBar></NavBar>
+      <NavBar>
+      </NavBar>
       <Routes>
        <Route  path="/" element={<Home/> } />
         <Route path="/masVendido" element={<MasVendidos/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/detail/:id" element={<ComidaDetail/>} />
       </Routes>
-      </CartProvider>
+
     </Router>
   );
 }

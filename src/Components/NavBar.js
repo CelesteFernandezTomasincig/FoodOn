@@ -1,16 +1,12 @@
-/*import {navbar, navbarDropdown} from "react-bootstrap";*/
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
 import CartWidget from './CartWIdget';
-import { CartContext } from "../context/CartContext";
 
 function NavBar() {
-  const { cartItems } = useContext(CartContext);
     
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container px-4 px-lg-5">
-        <CartWidget itemCount={cartItems.length} />
+        <CartWidget />
         <Link className="navbar-brand" to="/">FoodOn</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -31,7 +27,7 @@ function NavBar() {
             <Link to="/cart" className="btn btn-outline-dark">
               <i className="bi-cart-fill me-1"></i>
               Cart
-              <span className="badge bg-dark text-white ms-1 rounded-pill">{cartItems.length}</span>
+              <span className="badge bg-dark text-white ms-1 rounded-pill">0</span>
             </Link>
           </form>
         </div>

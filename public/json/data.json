@@ -11,7 +11,8 @@
     "name": "Hamburguesa Chees",
     "precio": 1700,
     "descripcion": "qui est esse est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
-    "img": " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWazD8VL2Pv2rxIlXnC56nC6Nwx37zmjXiFA&usqp=CAU"
+    "img": " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWazD8VL2Pv2rxIlXnC56nC6Nwx37zmjXiFA&usqp=CAU",
+    "masVendido": true
   },
   {
     "id":3,
@@ -25,7 +26,8 @@
     "name": "Hamburguesa Messirve",
     "precio": 1650,
     "descripcion": "eum et est occaecati",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNz-SVDlA7_LI6cfiJPDB6SiAh62IUOMmSOg&usqp=CAU"
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNz-SVDlA7_LI6cfiJPDB6SiAh62IUOMmSOg&usqp=CAU",
+    "masVendido": true
   },
   {
     "id":5,
@@ -39,7 +41,8 @@
     "name": "Hamburguesa Sarará",
     "precio": 1999,
     "descripcion": "dolorem eum magni eos aperiam quia",
-    "img": "https://www.infobae.com/new-resizer/IGVNt_OwhVuJnBWHh2OknRaxNIY=/1200x900/filters:format(webp):quality(85)//arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/4E7AO7Q6I5BULNYYH3SSO4WP2Y.jpeg"
+    "img": "https://jovifel.com.ar/wp-content/uploads/2022/02/hamburguesas.jpg",
+    "masVendido": true
   },
   {
     "id":7,
@@ -61,6 +64,6 @@
     "precio": 1999,
     "descripcion": "dolorem eum magni eos aperiam quia",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs3bdsc4tFKRD01loRdWN6Pi1M-uXq95DyOQ&usqp=CAU",
-    "masVendido": "True"
+    "masVendido": true
   }
 ]
