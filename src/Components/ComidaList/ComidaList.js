@@ -29,7 +29,7 @@ const ComidaList= () => {
     {comidaData.map((food) => {
     return( 
     <Link 
-    to={`details/${food.id}`}
+    to={`detail/${food.id}`}
     style={{ textDecoration: "none" }}
     key={food.id}>
     <ComidaCard key={food.id} dataComida={food}/>; 

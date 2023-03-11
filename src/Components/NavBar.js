@@ -28,8 +28,8 @@ function NavBar() {
             </li>
           </ul>
           <form className="d-flex">
-            <Link to="/cart" className="btn btn-outline-dark">
-              <i className="bi-cart-fill me-1"></i>
+            <Link to="/Cart" className="btn btn-outline-dark">
+              <i className="bi-cart-fill me-1"/>
               Cart
               <span className="badge bg-dark text-white ms-1 rounded-pill"> {items.length}</span>
             </Link>

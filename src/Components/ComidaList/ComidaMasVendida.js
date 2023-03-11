@@ -1,7 +1,7 @@
 import {db} from "../../firebase/firebaseConfig";
+import { Link } from "react-router-dom";
 import { collection, query, where, getDocs } from "firebase/firestore";
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ComidaCard from "../ComidaCard/ComidaCard"; 
 
 const ComidaMasVendida= () => { 
@@ -13,6 +13,8 @@ const ComidaMasVendida= () => {
       const querySnapshot = await getDocs(q)
       const docs = [];
       querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        //console.log(doc.id, " => ", doc.data());
         docs.push({...doc.data(), id: doc.id})
       });
       setComidaData(docs)
@@ -20,14 +22,22 @@ const ComidaMasVendida= () => {
     getComida();
   },[]);
 
-  return( 
-    <div>
-      {comidaData.map((food) => {
-        return <ComidaCard key={food.id} dataComida={food}/>;  
-      })}
-    </div>
-  );
+
+ return( 
+  <div>
+    {comidaData.map((food) => {
+    return( 
+      <Link 
+      to={`detail/${food.id}`}
+      style={{ textDecoration: "none" }}
+      key={food.id}>
+      <ComidaCard key={food.id} dataComida={food}/>; 
+    </Link>
+    
+    );
+  })}
+   </div>
+ );
 };
  
-
 export default ComidaMasVendida;
