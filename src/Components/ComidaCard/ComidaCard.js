@@ -7,22 +7,22 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 
 
 
-const ComidaCard = ({ data }) => {
+const ComidaCard = ({ dataComida }) => {
   return (
     <Card sx={{ maxWidth: 345, display: 'inline-block', width: '50%', }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image={data.img}
+          image={dataComida.img}
           alt="Hamburger"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {data.name}
+            {dataComida.hamburguesa}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            ${data.precio}
+            ${dataComida.price}
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -7,4 +7,4 @@ function MasVendidos() {
   )
 }
 
-export default MasVendidos
+export default MasVendidos;
