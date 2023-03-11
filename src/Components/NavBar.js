@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CartWidget from './CartWIdget';
-import { ItemsContext } from '../context/ItemContext';
-import { useContext } from 'react';
 
 function NavBar() {
-  const [items] = useContext(ItemsContext );
+ 
     
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">

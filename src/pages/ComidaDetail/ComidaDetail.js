@@ -1,8 +1,8 @@
 import {db} from "../../firebase/firebaseConfig";
 import React, { useEffect, useState } from 'react';
 import { useParams} from 'react-router-dom';
-import ComidaCard from "../../Components/ComidaCard/ComidaCard";
 import { collection, query, where, getDocs, documentId } from "firebase/firestore";
+import ComidaCardDetail from "../../Components/ComidaCardDetail/ComidaCardDetail";
 
 
 
@@ -24,12 +24,12 @@ const ComidaDetail = () => {
       setComidaDat(docs)
     };
     getComida();
-  },[]);
+  },[id]);
 
 
   return (
      comidaDat.map((food) => {
-      return <ComidaCard key={food.id} dataComida={food}/>
+      return <ComidaCardDetail key={food.id} dataComida={food}/>
     })
     )
 }
