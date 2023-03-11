@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {db} from "../../firebase/firebaseConfig";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { useState } from 'react';
@@ -26,7 +27,14 @@ const ComidaList= () => {
  return( 
   <div>
     {comidaData.map((food) => {
-    return <ComidaCard key={food.id} dataComida={food}/>;  
+    return( 
+    <Link 
+    to={`details/${food.id}`}
+    style={{ textDecoration: "none" }}
+    key={food.id}>
+    <ComidaCard key={food.id} dataComida={food}/>; 
+    </Link>
+    );
   })}
    </div>
  );

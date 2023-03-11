@@ -1,26 +1,37 @@
+import {db} from "../../firebase/firebaseConfig";
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import { useParams} from 'react-router-dom';
 import ComidaCard from "../../Components/ComidaCard/ComidaCard";
+import { collection, query, where, getDocs, documentId } from "firebase/firestore";
+
 
 
 const ComidaDetail = () => {
-  const [hamburguesa, setComidas] = useState ({});
+  const [comidaDat, setComidaDat] = useState ([]);
 
-  let { id } = useParams();
+  const { id } = useParams ();
 
-  useEffect(()=> {
-    axios(`../json/data.json`).then((res)=>
-      setComidas(res.data.find((item)=>item.id===parseInt(id)))
-      );
-  }, [id])
-return (
-  <div className='comidaDetail'>
-      <div>
-          <ComidaCard data={hamburguesa}/>
-      </div>
-  </div>
-)
+  useEffect(() => {
+    const getComida = async () => {
+      const q = query(collection(db, "food"), where (documentId(), "==", id));
+      const docs = [];
+      const querySnapshot = await getDocs(q)
+      querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        //console.log(doc.id, " => ", doc.data());
+        docs.push({...doc.data(), id: doc.id});
+      });
+      setComidaDat(docs)
+    };
+    getComida();
+  },[]);
+
+
+  return (
+     comidaDat.map((food) => {
+      return <ComidaCard key={food.id} dataComida={food}/>
+    })
+    )
 }
 
 export default ComidaDetail;
