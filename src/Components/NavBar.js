@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CartWidget from './CartWIdget';
-import { ItemsContext } from '../context/ItemsContext';
+import { ItemsContext } from '../context/ItemContext';
 import { useContext } from 'react';
 
 function NavBar() {
-  const [items] = useContext(ItemsContext);
+  const [items] = useContext(ItemsContext );
     
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -31,7 +31,7 @@ function NavBar() {
             <Link to="/Cart" className="btn btn-outline-dark">
               <i className="bi-cart-fill me-1"/>
               Cart
-              <span className="badge bg-dark text-white ms-1 rounded-pill"> {items.length}</span>
+              <span className="badge bg-dark text-white ms-1 rounded-pill"></span>
             </Link>
           </form>
         </div>

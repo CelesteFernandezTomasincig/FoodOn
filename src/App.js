@@ -6,17 +6,16 @@ import MasVendidos from "./pages/masVendidos/MasVendidos";
 import Contact from "./pages/contacto/Contact";
 import ComidaDetail from './pages/ComidaDetail/ComidaDetail';
 import NavBar from "./Components/NavBar";
-import { ItemsProvider } from './context/ItemsContext';
+import {ItemsContext } from './context/ItemContext';
 import Cart from './pages/Cart/Cart';
-
 
 function App() {
   return (
     <Router>
-       <ItemsProvider>
+       <ItemsContext >
       <NavBar>
       </NavBar>
-      </ItemsProvider>
+      </ItemsContext >
       <Routes>
        <Route  path="/" element={<Home/> } />
         <Route path="/masVendido" element={<MasVendidos/>} />
