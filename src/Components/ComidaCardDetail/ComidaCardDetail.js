@@ -41,4 +41,4 @@ export const ComidaCardDetail = ({dataComida}) => {
   )
 }
 
-export default ComidaCardDetail
+export default ComidaCardDetail;
