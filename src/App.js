@@ -6,13 +6,13 @@ import MasVendidos from "./pages/masVendidos/MasVendidos";
 import Contact from "./pages/contacto/Contact";
 import ComidaDetail from './pages/ComidaDetail/ComidaDetail';
 import NavBar from "./Components/NavBar";
-import CartContextProvider from './context/ItemContext'
+import CartProvider from './context/CardContext'
 import Cart from './pages/Cart/Cart';
 
 function App() {
   return (
     <Router>
-      <CartContextProvider>
+      <CartProvider>
       <NavBar/>
       <Routes>
        <Route  path="/" element={<Home/> } />
@@ -22,7 +22,7 @@ function App() {
         <Route path="/detail/:id" element={<ComidaDetail/>} />
         <Route path="/Cart" element={<Cart/>} />
       </Routes>
-      </CartContextProvider>
+      </CartProvider>
     </Router>
   );
 }

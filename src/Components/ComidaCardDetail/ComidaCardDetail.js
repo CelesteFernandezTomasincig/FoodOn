@@ -1,18 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ItemCount from '../ItemCount/ItemCount';
-import { ItemsContext } from '../../context/ItemContext';
+import{ useCartContext }from '../../context/CardContext'
 
-const ComidaCardDetail = ({dataComida}) => {
-    
-    
-    const {addToCart}=useContext(ItemsContext)
+export const ComidaCardDetail = ({dataComida}) => {
+    const [goToCart, setGoToCart] = useState(false);
+    const {addProduct}= useCartContext
 
     const onAdd= (cantidad) => {
-        addToCart(dataComida, cantidad)
+        setGoToCart (true);
+        addProduct(dataComida, cantidad)
     }
     
   return (

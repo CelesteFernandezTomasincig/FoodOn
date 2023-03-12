@@ -1,9 +1,13 @@
-import React from 'react'
+import Button from 'react-bootstrap/Button';
 
 function Cart() {
   return (
-    <div>Cart</div>
-  )
+    <>
+      <Button variant="outline-primary">Comprar</Button>{' '}
+      <Button variant="outline-secondary">Eliminar Productos</Button>{' '}
+      <Button variant="outline-success">Total</Button>{' '}
+    </>
+  );
 }
 
 export default Cart;

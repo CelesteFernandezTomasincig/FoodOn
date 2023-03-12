@@ -3,13 +3,6 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { collection, addDoc } from "firebase/firestore";
 
-const initialState = {
-  name: "",
-  email: "", 
-  edad: "",
-  telefono: "",
-  direccion: ""
-}
 
 const Contact = () => {
   const { register, formState: { errors }, handleSubmit, reset } = useForm();
@@ -21,7 +14,11 @@ const Contact = () => {
     reset();
 
     const docRef = await addDoc(collection(db, "clientes"), {
-      initialState,
+      name: " ",
+      email: " ", 
+      edad: " ",
+      telefono: " ",
+      direccion: " "
     });
     console.log("Document written with ID: ", docRef.id);
     setIsSubmitted(true);
