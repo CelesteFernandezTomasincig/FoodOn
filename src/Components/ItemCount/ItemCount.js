@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
@@ -24,13 +25,16 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           +
         </button>
       </div>
+      <Link to="/Cart"> 
       <button
         className="btn btn-dark"
         disabled={count === 0 || stock === 0}
         onClick={() => onAdd(count)}
+        
       >
         Comprar
       </button>
+      </Link>
     </>
   );
 };

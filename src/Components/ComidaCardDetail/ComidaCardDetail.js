@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import ItemCount from '../ItemCount/ItemCount';
 import{ useCartContext }from '../../context/CardContext'
 
+
 export const ComidaCardDetail = ({dataComida}) => {
     const [goToCart, setGoToCart] = useState(false);
     const {addProduct}= useCartContext

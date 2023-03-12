@@ -1,30 +1,34 @@
-import {db} from "../../firebase/firebaseConfig";
+import { db } from "../../firebase/firebaseConfig";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { collection, addDoc } from "firebase/firestore";
-
 
 const Contact = () => {
   const { register, formState: { errors }, handleSubmit, reset } = useForm();
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const onSubmit = async (data) => {
-    console.log(data);
     setIsSubmitted(true);
     reset();
 
-    const docRef = await addDoc(collection(db, "clientes"), {
-      name: " ",
-      email: " ", 
-      edad: " ",
-      telefono: " ",
-      direccion: " "
-    });
-    console.log("Document written with ID: ", docRef.id);
-    setIsSubmitted(true);
-    reset();
-    // Mostrar mensaje con el ID generado
-    alert(`Sus datos se han enviado correctamente y su ID es: ${docRef.id}`);
+    try {
+      // Guardar datos en Firebase
+      const docRef = await addDoc(collection(db, "clientes"), {
+        name: data.nombre,
+        email: data.email,
+        edad: data.edad,
+        telefono: data.telefono,
+        direccion: data.direccion
+      });
+      console.log("Document written with ID: ", docRef.id);
+      // Mostrar mensaje con el ID generado
+      alert(`Sus datos se han enviado correctamente y su ID es: ${docRef.id}`);
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert("Ha ocurrido un error al guardar los datos.");
+    }
+
+    setIsSubmitted(false);
   };
 
   return (
