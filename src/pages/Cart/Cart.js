@@ -1,11 +1,28 @@
-import Button from 'react-bootstrap/Button';
+import React from 'react';
+import { useCartContext } from '../../context/CardContext';
+import { Link } from 'react-router-dom';
+import ItemCart from '../../Components/ItemCart/ItemCard';
 
-function Cart() {
+
+const Cart =()=> {
+  const {cart, totalPrice} = useCartContext();
+
+  if (cart.lenght === 0 ) {
+    return(
+      <>
+       <p>No hay elementos en el carrito</p>
+       <Link to="/">Hacer compra</Link>
+      </>
+    );
+  }
   return (
     <>
-      <Button variant="outline-primary">Comprar</Button>{' '}
-      <Button variant="outline-secondary">Eliminar Productos</Button>{' '}
-      <Button variant="outline-success">Total</Button>{' '}
+      {
+      cart.map(product=><ItemCart key={product.id} product={product}/>)
+      }
+      <p>
+        total: {totalPrice()}
+      </p>
     </>
   );
 }

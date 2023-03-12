@@ -20,7 +20,7 @@ export const ComidaCardDetail = ({dataComida}) => {
     
         <CardMedia
           component="img"
-         style={{width:'50%'}} 
+          style={{width:'50%'}} 
           image={dataComida.img}
           alt="Hamburger"
         />
