@@ -4,16 +4,16 @@ import './itemCart.css';
 import {ComidaCardDetail} from '../ComidaCardDetail/ComidaCardDetail'
 
 
-const ItemCart = ({ product }) =>{
+const ItemCart = ({ dataComida }) =>{
 const {removeProduct}=useCartContext();
     return (
         <div className="itemCart">
-            <img src={product.img}></img>
+            <img src={dataComida.img}></img>
             <div>
-                <p>Titulo: {product.name}</p>
-                <p>Precio: {product.price}</p>
-                <p>Subtotal: ${product.cantidad * product.price}</p>
-                <button onClick={() => removeProduct(product.id)}>Eliminar</button>
+                <p>Titulo: {dataComida.name}</p>
+                <p>Precio: {dataComida.price}</p>
+                <p>Subtotal: ${dataComida.cantidad * dataComida.price}</p>
+                <button onClick={() => removeProduct(dataComida.id)}>Eliminar</button>
             </div>
         </div>
     )
