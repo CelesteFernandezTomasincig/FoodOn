@@ -2,7 +2,7 @@
   "name": "celesteft",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://CelesteFernandezTomasincig.github.io/cftfoodon",
+  "homepage": "http://CelesteFernandezTomasincig.github.io/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
