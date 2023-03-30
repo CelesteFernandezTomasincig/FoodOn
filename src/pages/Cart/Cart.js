@@ -1,10 +1,10 @@
 import React from 'react';
-import { useCartContext, getTotal } from '../../context/CardContext';
+import { useCartContext } from '../../context/CardContext';
 import { Link } from 'react-router-dom';
 import ItemCart from '../../Components/ItemCart/ItemCart';
 
 const Cart =()=> {
-  const { cart } = useCartContext();
+  const { cart, getTotal } = useCartContext();
 
   return (
     <>
@@ -15,7 +15,9 @@ const Cart =()=> {
           ))}
           <div>
             <p>Total: ${getTotal()}</p>
+            <Link to="../../contact">
             <button>Finalizar compra</button>
+            </Link>
           </div>
           <Link to="/">Seguir comprando</Link>
         </div>

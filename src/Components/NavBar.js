@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CartWidget from './CartWIdget';
+import { useCartContext } from '../context/CardContext';
 
 function NavBar() {
- 
+  const { getQuantity } = useCartContext();
     
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,14 +23,16 @@ function NavBar() {
               <Link className="nav-link active" aria-current="page" to="/masVendido">Mas vendido</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/contact">Registrate</Link>
+              <Link className="nav-link active" aria-current="page" to="/contact">Tus Datos</Link>
             </li>
           </ul>
           <form className="d-flex">
-            <Link to="/Cart" className="btn btn-outline-dark">
+          <Link to="/Cart" className="btn btn-outline-dark">
               <i className="bi-cart-fill me-1"/>
               Cart
-              <span className="badge bg-dark text-white ms-1 rounded-pill"></span>
+              {getQuantity() > 0 && ( // Muestra la cantidad solo si hay productos en el carrito
+                <span className="badge bg-dark text-white ms-1 rounded-pill">{getQuantity()}</span>
+              )}
             </Link>
           </form>
         </div>
